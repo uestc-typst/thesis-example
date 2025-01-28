@@ -1,0 +1,3 @@
+[submodule "uestc-thesis-template"]
+	path = uestc-thesis-template
+	url = https://github.com/qujihan/uestc-thesis-typst-template.git
