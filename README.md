@@ -2,7 +2,7 @@
 <strong>
 <samp>
 
-无须给本仓库Star, 建议给[模板](https://github.com/uestc-typst/thesis-template)仓库点Star！
+无须给本仓库Star, 建议给[模板](https://github.com/uestc-typst/thesis-template)仓库点Star！有问题也需要在[模板](https://github.com/uestc-typst/thesis-template)仓库提issues.
 
 <h1 align="center">
   <img alt="Typst" src="https://github.com/uestc-typst/thesis-template/blob/main/pics/uestc-love-typst.png">
@@ -18,6 +18,11 @@
 
 <a href="https://qm.qq.com/q/CcdqIUtQfQ">
 <img alt="点击加入QQ群" src="https://img.shields.io/badge/%E7%82%B9%E5%87%BB%E5%8A%A0%E5%85%A5-QQ%E7%BE%A4:1051374133-bule?logo=qq"
+></a>
+
+
+<a href="https://github.com/uestc-typst/thesis-template/discussions">
+<img alt="discussions" src="https://img.shields.io/badge/%E8%AE%BA%E6%96%87%E5%8F%8D%E9%A6%88-%E8%AE%BA%E5%9D%9B-blue"
 ></a>
 
 </samp>
