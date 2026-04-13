@@ -482,8 +482,6 @@
 - `LineBreak`：空行
 - `LineComment[注释内容][代码行]`：行内注释（注释在右侧）
 - `If[条件][代码块]`：if 语句
-- `ElseIf[条件][代码块]`：else if 语句
-- `Else[代码块]`：else 语句
 - `IfElseChain[条件1][代码块1][条件2][代码块2]...[代码块n]`：if-else if-...-else 链
 - `For[条件][代码块]`：for 循环
 - `While[条件][代码块]`：while 循环
