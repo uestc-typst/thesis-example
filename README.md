@@ -12,7 +12,7 @@
 <img alt="Apache-2 License" src="https://img.shields.io/badge/license-Apache%202-brightgreen"
 ></a>
 
-<a href="https://github.com/uestc-typst/thesis-example/blob/output/%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97%E5%8F%8A%E4%BE%8B%E5%AD%90.pdf">
+<a href="https://github.com/kong13661/thesis-example/blob/output/%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97%E5%8F%8A%E4%BE%8B%E5%AD%90.pdf">
 <img alt="doc" src="https://img.shields.io/badge/%E7%82%B9%E8%BF%99%E9%87%8C-%E6%9F%A5%E7%9C%8B%E6%96%87%E6%A1%A3-red.svg"
 ></a>
 
@@ -58,25 +58,22 @@ make build
 make watch
 ```
 
-## 📄 下载生成的 PDF
+# 📄 文档
 
-本仓库通过 CI 自动将构建好的 PDF 推送到 `output` 分支，PDF 文件**不纳入 git 主分支管理**（避免仓库体积膨胀）。
+本仓库生成的 `学位论文写作指南及例子.pdf` 是一份完整的论文写作指南，涵盖模板的使用方法和排版示例。
 
-你可以通过以下方式下载：
+> PDF 文件**不纳入 git 主分支管理**（避免仓库体积膨胀），通过 CI 自动构建并推送到 `output` 分支。
 
-**方式一：直接下载（推荐）**
-
-点击页面顶部的红色 **「查看文档」** 徽章，或在浏览器中访问：
+**在线查看**：点击页面顶部的红色 **「查看文档」** 徽章，或直接访问：
 ```
-https://github.com/uestc-typst/thesis-example/blob/output/学位论文写作指南及例子.pdf
+https://github.com/kong13661/thesis-example/blob/output/学位论文写作指南及例子.pdf
 ```
 
-**方式二：clone 时一并下载**
-
+**下载到本地**：
 ```shell
-git clone https://github.com/uestc-typst/thesis-example.git thesis
+git clone https://github.com/kong13661/thesis-example.git thesis
 cd thesis
-# 从 output 分支检出 PDF 到本地（不会切换分支）
+# 从 output 分支检出 PDF（不会切换分支）
 git restore --source=origin/output --worktree "学位论文写作指南及例子.pdf"
 ```
 
