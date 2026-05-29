@@ -64,10 +64,9 @@ make watch
 
 > PDF 文件**不纳入 git 主分支管理**（避免仓库体积膨胀），通过 CI 自动构建并推送到 `output` 分支。
 
-**在线查看**：点击页面顶部的红色 **「查看文档」** 徽章，或直接访问：
-```
-https://github.com/kong13661/thesis-example/blob/output/学位论文写作指南及例子.pdf
-```
+**在线预览**：[点击预览 PDF](https://raw.githubusercontent.com/kong13661/thesis-example/output/学位论文写作指南及例子.pdf)
+
+**下载 PDF**：在预览页面点击右上角下载按钮即可下载。
 
 **下载到本地**：
 ```shell
