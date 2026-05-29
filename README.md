@@ -58,6 +58,28 @@ make build
 make watch
 ```
 
+## 📄 下载生成的 PDF
+
+本仓库通过 CI 自动将构建好的 PDF 推送到 `output` 分支，PDF 文件**不纳入 git 主分支管理**（避免仓库体积膨胀）。
+
+你可以通过以下方式下载：
+
+**方式一：直接下载（推荐）**
+
+点击页面顶部的红色 **「查看文档」** 徽章，或在浏览器中访问：
+```
+https://github.com/uestc-typst/thesis-example/blob/output/学位论文写作指南及例子.pdf
+```
+
+**方式二：clone 时一并下载**
+
+```shell
+git clone https://github.com/uestc-typst/thesis-example.git thesis
+cd thesis
+# 从 output 分支检出 PDF 到本地（不会切换分支）
+git restore --source=origin/output --worktree "学位论文写作指南及例子.pdf"
+```
+
 # 当 Fork 本仓库后需要更改的事情
 ## 建议修改
 - 修改`.vscode/settings.json`文件

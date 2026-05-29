@@ -9,7 +9,6 @@ repository = "https://github.com/uestc-typst/thesis-template"
 keywords = ["UESTC", "thesis", "degree", "template", "Typst", "电子科技大学"]
 categories = ["thesis"]
 compiler = "0.13.0"
-exclude = ["fonts/*"]
 
 [template]
 path = "."
