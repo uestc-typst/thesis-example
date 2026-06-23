@@ -12,7 +12,7 @@
 <img alt="Apache-2 License" src="https://img.shields.io/badge/license-Apache%202-brightgreen"
 ></a>
 
-<a href="https://github.com/uestc-typst/thesis-example/blob/output/%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97%E5%8F%8A%E4%BE%8B%E5%AD%90.pdf">
+<a href="https://github.com/kong13661/thesis-example/blob/output/%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97%E5%8F%8A%E4%BE%8B%E5%AD%90.pdf">
 <img alt="doc" src="https://img.shields.io/badge/%E7%82%B9%E8%BF%99%E9%87%8C-%E6%9F%A5%E7%9C%8B%E6%96%87%E6%A1%A3-red.svg"
 ></a>
 
@@ -56,6 +56,22 @@ make build
 # 生成一个名为 学位论文写作指南及例子.pdf 的文件, 并且随着写作实时预览
 # 可以在 makefile 中修改生成的文件名
 make watch
+```
+
+# 📄 文档
+
+本仓库生成的 `学位论文写作指南及例子.pdf` 是一份完整的论文写作指南，涵盖模板的使用方法和排版示例。
+
+> PDF 文件**不纳入 git 主分支管理**（避免仓库体积膨胀），通过 CI 自动构建并推送到 `output` 分支。
+
+**在线预览**：[点击预览 PDF](https://cdn.jsdelivr.net/gh/uestc-typst/thesis-example@output/%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97%E5%8F%8A%E4%BE%8B%E5%AD%90.pdf)
+
+**下载到本地**：
+```shell
+git clone https://github.com/uestc-typst/thesis-example.git thesis
+cd thesis
+# 从 output 分支检出 PDF（不会切换分支）
+git restore --source=origin/output --worktree "学位论文写作指南及例子.pdf"
 ```
 
 # 当 Fork 本仓库后需要更改的事情
