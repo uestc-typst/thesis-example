@@ -54,6 +54,8 @@ git clone https://github.com/{YOUR-NAME}/uestc-typst-thesis-example.git thesis
 cd thesis; 
 git submodule update --init --recursive
 
+cd example
+
 # 生成一个名为 学位论文写作指南及例子.pdf 的文件
 # 可以在 makefile 中修改生成的文件名
 make build
@@ -62,6 +64,16 @@ make build
 # 可以在 makefile 中修改生成的文件名
 make watch
 ```
+
+## 🪶 使用 VS Code（推荐）
+
+本仓库已预配置 Tinymist Typst 扩展，**直接用 VS Code 打开仓库根目录**即可获得实时预览和 PDF 导出，无需手动配置。
+
+1. **安装扩展**：在 VS Code 扩展市场搜索并安装Tinymist Typst
+
+2. **打开项目**：用 VS Code 直接打开**仓库根目录**（不要打开 `example/` 子目录），仓库自带的 [.vscode/settings.json](.vscode/settings.json) 会自动生效，配置好字体路径、根目录、输出路径等。
+
+3. 打开tinymnist的预览即可，同时此扩展可以直接输出pdf。
 
 # 📄 文档
 

@@ -1,7 +1,7 @@
 [package]
 name = "uestc-thesis"
 version = "2.0.0"
-entrypoint = "uestc-thesis-template/lib.typ"
+entrypoint = "example/uestc-thesis-template/lib.typ"
 authors = ["UESTC Typst Community"]
 license = "Apache-2.0"
 description = "电子科技大学本科/硕士/博士学位论文 Typst 模板，博士模板已经过学校验证。"
@@ -11,6 +11,6 @@ categories = ["thesis"]
 compiler = "0.13.0"
 
 [template]
-path = "."
+path = "example"
 entrypoint = "main.typ"
 thumbnail = "thumbnail.png"

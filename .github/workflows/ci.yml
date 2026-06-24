@@ -22,7 +22,10 @@ jobs:
       - name: build
         run: |
           git submodule update --init --recursive
+          cd example
           make build
+          # 将生成的 PDF 移到仓库根目录，使 output 分支中不包含 example/ 目录
+          mv *.pdf ..
 
       - name: Checkout output branch
         run: |
