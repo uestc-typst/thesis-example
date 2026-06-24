@@ -31,7 +31,7 @@ jobs:
           git config user.email "<>"
           git checkout --orphan output
           git rm -r --cached .
-          git add -f example/*.pdf
+          git add -f *.pdf
           git commit -m "Update output files"
 
       - name: Push changes
