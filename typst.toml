@@ -1,5 +1,5 @@
 [package]
-name = "electronic-uestc-thesis"
+name = "uestc-thesis"
 version = "2.0.0"
 entrypoint = "uestc-thesis-template/lib.typ"
 authors = ["UESTC Typst Community"]
