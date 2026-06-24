@@ -71,7 +71,7 @@ make watch
 
 1. **安装扩展**：在 VS Code 扩展市场搜索并安装Tinymist Typst
 
-2. **打开项目**：用 VS Code 直接打开**仓库根目录**（不要打开 `example/` 子目录），仓库自带的 [.vscode/settings.json](.vscode/settings.json) 会自动生效，配置好字体路径、根目录、输出路径等。
+2. **打开项目**：用 VS Code 直接打开仓库目录（根目录或者 `example/` 子目录都可以），仓库自带的 [.vscode/settings.json](.vscode/settings.json) 会自动生效，配置好字体路径、根目录、输出路径等。
 
 3. 打开tinymnist的预览即可，同时此扩展可以直接输出pdf。
 
