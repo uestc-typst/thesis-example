@@ -2,7 +2,9 @@
 <strong>
 <samp>
 
-无须给本仓库Star, 建议给[模板](https://github.com/uestc-typst/thesis-template)仓库点Star！有问题也需要在[模板](https://github.com/uestc-typst/thesis-template)仓库提issues.
+
+
+无须给本仓库Star, 建议给[模板](https://github.com/uestc-typst/thesis-template)仓库点Star！有问题也需要在[模板](https://github.com/uestc-typst/thesis-template)仓库提issues. 本[仓库地址](https://github.com/uestc-typst/thesis-example).
 
 <h1 align="center">
   <img alt="Typst" src="https://github.com/uestc-typst/thesis-template/blob/main/pics/uestc-love-typst.png">
