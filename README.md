@@ -34,6 +34,9 @@
 
 # 📚电子科技大学学位论文Typst模板实例
 
+> [!NOTE]
+> ✅ **学术博士学位论文已通过学校格式验证**：本模板严格遵循《电子科技大学研究生学位论文撰写规范》，可直接用于学术博士学位论文撰写。其他类型论文应当只有扉页有所区别，如有笔误等错误，欢迎在[模板](https://github.com/uestc-typst/thesis-template)提issue。
+
 > [!IMPORTANT]  
 > 本仓库是一个模板仓库, 在[Github主页](https://github.com/qujihan/uestc-typst-thesis-example)右上角可以看到一个 `Use this template` 按钮, 可以直接使用本仓库作为模板创建一个新的仓库.
 > 
