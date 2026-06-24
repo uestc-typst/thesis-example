@@ -4,6 +4,164 @@
 
 本模板是电子科技大学学位论文的 Typst 模板，本章节将详细介绍模板提供的各种功能及其用法。
 
+
+== `main.typ` 配置参数说明 <usage-main-params>
+
+本节列出 `main.typ` 中所有可配置的参数，按功能分组说明。
+
+=== 匿名模式与论文排版模式
+
+以下参数控制模板的匿名评审和论文排版模式：
+
+#block(width: 100%)[
+  #set align(center)
+  #block(breakable: false)[
+    #set align(left)
+    ```typ
+    // 匿名模式：隐藏作者、导师等个人信息，用于匿名评审
+    info-keys.匿名: false,
+    /*
+      论文排版模式
+      论文模式.修订模式:        用于审稿修订，#revise[修改内容] 会标红显示
+      论文模式.电子档定稿模式:  用于提交电子档定稿，revise 不标红，
+                               独创性声明页替换为扫描页（需设置 info-keys.独创性声明扫描页 路径）
+      论文模式.打印模式:        用于双面打印，奇数页起始，revise 不标红
+    */
+    info-keys.论文模式: 论文模式.打印模式,
+    // 电子档定稿模式下需要设置独创性声明扫描页路径（A4 大小的 PDF/PNG 扫描件）
+    info-keys.独创性声明扫描页: "src/独创性声明.pdf",
+    ```
+  ]
+]
+
+=== 字体设置
+
+模板支持自定义宋体、黑体等字体：
+
+#block(width: 100%)[
+  #set align(center)
+  #block(breakable: false)[
+    #set align(left)
+    ```typ
+    // 黑体字体（Windows 默认 SimHei，macOS/Linux 建议 "Source Han Sans SC"）
+    info-keys.黑体字体: "SimHei",
+    // 宋体字体（Windows 默认 SimSun，macOS/Linux 建议 "Source Han Serif SC"）
+    info-keys.宋体字体: "SimSun",
+    // 加粗粗度：仅在不使用 Sim* 系列字体时生效
+    info-keys.加粗粗度: 250,
+    ```
+  ]
+]
+
+=== 封面信息
+
+封面包含论文标题、作者、导师、学院等基本信息：
+
+#block(width: 100%)[
+  #set align(center)
+  #block(breakable: false)[
+    #set align(left)
+    ```typ
+    // 基本参数（影响封面总体效果）
+    info-keys.申请学位级别: "硕士",  // 可选：学士、硕士、博士
+    info-keys.学位类型: "专业型",    // 可选：学术型、专业型
+
+    // 封面信息（支持使用 \\n 换行）
+    info-keys.论文中文标题: "论文标题",
+    info-keys.作者学科专业: "学科专业",       // 学术型填写，专业型忽略
+    info-keys.作者专业学位类别: "专业学位类别", // 专业型填写，学术型忽略
+    info-keys.作者学号: "2022XXXXXXXX",
+    info-keys.作者中文名: "作者姓名",
+    info-keys.指导老师中文名: "导师姓名",
+    info-keys.指导老师职称中文: "教授",
+    info-keys.作者学院: "学院名称",
+    ```
+  ]
+]
+
+=== 中文扉页信息
+
+中文扉页包含分类号、密级、答辩信息等详细内容：
+
+#block(width: 100%)[
+  #set align(center)
+  #block(breakable: false)[
+    #set align(left)
+    ```typ
+    info-keys.分类号: "TP309.2",
+    info-keys.密级: "公开",
+    info-keys.UDC: "004.78",
+    info-keys.指导老师单位: "电子科技大学 成都",
+    info-keys.合作导师中文名: "合作导师姓名",
+    info-keys.合作导师职称中文: "教授",
+    info-keys.合作导师单位: "合作导师单位",
+    info-keys.专业学位领域: "领域名称", // 专业型填写，学术型忽略
+    info-keys.提交日期: "2025年3月17日",
+    info-keys.答辩日期: "2025年4月15日",
+    info-keys.学位授予单位: "电子科技大学",
+    info-keys.学位授予日期: "2025年6月1日",
+    info-keys.答辩委员会主席: "主席名称",
+    info-keys.答辩委员会主席职称: "主席职称",
+    // 以下两个参数为元组类型
+    info-keys.评阅人: ("成员1", "成员2"),
+    ```
+  ]
+]
+
+=== 英文扉页信息
+
+英文扉页对应中文扉页的英文版本：
+
+#block(width: 100%)[
+  #set align(center)
+  #block(breakable: false)[
+    #set align(left)
+    ```typ
+    info-keys.论文英文标题: "English Thesis Title",
+    info-keys.作者学科专业英文: "Discipline",      // 学术型填写
+    // info-keys.作者专业学位类别英文: "Category",  // 专业型填写
+    info-keys.作者英文名: "Author Name",
+    info-keys.指导老师英文名: "Advisor Name",
+    info-keys.指导老师职称英文: "Professor",
+    info-keys.作者学院英文: "School Name",
+    ```
+  ]
+]
+
+=== 论文内容信息
+
+以下参数配置论文正文内容，包括摘要、附录、参考文献等：
+
+#block(width: 100%)[
+  #set align(center)
+  #block(breakable: false)[
+    #set align(left)
+    ```typ
+    // 使用 include 引入内容的参数
+    info-keys.中文摘要: include "src/摘要-中文.typ",
+    info-keys.英文摘要: include "src/摘要-英语.typ",
+    info-keys.致谢: include "src/致谢.typ",
+    // 附录为元组（可包含多个 include）
+    info-keys.附录: (include "src/附录-1.typ", include "src/附录-2.typ"),
+
+    // 使用字符串路径的参数
+    info-keys.参考文献: "src/bib/参考文献.bib",
+
+    // 关键字为元组
+    info-keys.中文摘要关键字: ("关键字1", "关键字2"),
+    info-keys.英文摘要关键字: ("Keyword1", "Keyword2"),
+
+    // 成果列表（字典格式）和攻读学位期间取得成果
+    // 详见"攻读学位期间取得成果"章节
+    info-keys.成果列表: (...),
+    info-keys.攻读学位期间取得成果: true,
+
+    // 浮动表图：当页面包含一级标题时，浮动图表放在页面底部
+    info-keys.浮动表图标题页置底: true,
+    ```
+  ]
+]
+
 == 图片相关
 
 === 插入图片 <usage-picture>
@@ -1096,14 +1254,14 @@ $ cal(L) = sum_(i=1)^n (y_i - f(x_i))^2 $ <loss-function>
 
 === 修改标记（revise） <usage-revise>
 
-使用 `#revise[文字]` 标记论文中修改的内容。在非打印模式下，标记的文字会显示为红色，方便审阅；当开启打印模式时，红色标记会自动取消，恢复正常显示。
+使用 `#revise[文字]` 标记论文中修改的内容。在修订模式下，标记的文字会显示为红色，方便审阅；在打印模式或电子档定稿模式下，红色标记会自动取消，恢复正常显示。
 
 #block(width: 100%)[
   #set align(center)
   #block(breakable: false)[
     #set align(left)
     ```typ
-    // 标记修改内容（非打印模式显示红色，打印模式正常显示）
+    // 标记修改内容（修订模式显示红色，打印/定稿模式正常显示）
     #revise[这里是修改后的内容]
 
     // 也可以标记较长的段落
@@ -1115,13 +1273,14 @@ $ cal(L) = sum_(i=1)^n (y_i - f(x_i))^2 $ <loss-function>
   ]
 ]
 
-效果如下（当前为非打印模式，修改内容以红色显示）：
+效果如下（当前为打印模式，修改内容正常显示；切换为修订模式时此处会变红）：
 
 #revise[这是使用 revise 标记的修改内容。]
 
 *工作原理：*
-- 非打印模式（`info-keys.打印模式: false`）：标记内容显示为红色
-- 打印模式（`info-keys.打印模式: true`）：标记内容正常显示，不添加任何颜色
+- 修订模式（`info-keys.论文模式: 论文模式.修订模式`）：标记内容显示为红色
+- 打印模式（`info-keys.论文模式: 论文模式.打印模式`）：标记内容正常显示，不添加任何颜色
+- 电子档定稿模式（`info-keys.论文模式: 论文模式.电子档定稿模式`）：标记内容正常显示，不添加任何颜色
 
 === 路径说明
 
@@ -1167,160 +1326,6 @@ $ cal(L) = sum_(i=1)^n (y_i - f(x_i))^2 $ <loss-function>
       成果列表-keys.其他成果: include "src/攻读学位期间取得成果.typ",
       成果列表-keys.其他成果-匿名: include "src/攻读学位期间取得成果-匿名.typ",
     ),
-    ```
-  ]
-]
-
-== `main.typ` 配置参数说明 <usage-main-params>
-
-本节列出 `main.typ` 中所有可配置的参数，按功能分组说明。
-
-=== 调试与模式开关
-
-以下参数控制模板的调试输出和页面模式：
-
-#block(width: 100%)[
-  #set align(center)
-  #block(breakable: false)[
-    #set align(left)
-    ```typ
-    // 调试模式：显示边框等调试信息
-    info-keys.DEBUG: true,
-
-    // 匿名模式：隐藏作者、导师等个人信息，用于匿名评审
-    info-keys.匿名: false,
-
-    // 打印模式：调整页面边距以适应双面打印
-    // 同时会使 #revise[] 标记的红色修改内容恢复正常显示
-    info-keys.打印模式: false,
-    ```
-  ]
-]
-
-=== 字体设置
-
-模板支持自定义宋体、黑体等字体：
-
-#block(width: 100%)[
-  #set align(center)
-  #block(breakable: false)[
-    #set align(left)
-    ```typ
-    // 黑体字体（Windows 默认 SimHei，macOS/Linux 建议 "Source Han Sans SC"）
-    info-keys.黑体字体: "SimHei",
-    // 宋体字体（Windows 默认 SimSun，macOS/Linux 建议 "Source Han Serif SC"）
-    info-keys.宋体字体: "SimSun",
-    // 加粗粗度：仅在不使用 Sim* 系列字体时生效
-    info-keys.加粗粗度: 250,
-    ```
-  ]
-]
-
-=== 封面信息
-
-封面包含论文标题、作者、导师、学院等基本信息：
-
-#block(width: 100%)[
-  #set align(center)
-  #block(breakable: false)[
-    #set align(left)
-    ```typ
-    // 基本参数（影响封面总体效果）
-    info-keys.申请学位级别: "硕士",  // 可选：学士、硕士、博士
-    info-keys.学位类型: "专业型",    // 可选：学术型、专业型
-
-    // 封面信息（支持使用 \\n 换行）
-    info-keys.论文中文标题: "论文标题",
-    info-keys.作者学科专业: "学科专业",       // 学术型填写，专业型忽略
-    info-keys.作者专业学位类别: "专业学位类别", // 专业型填写，学术型忽略
-    info-keys.作者学号: "2022XXXXXXXX",
-    info-keys.作者中文名: "作者姓名",
-    info-keys.指导老师中文名: "导师姓名",
-    info-keys.指导老师职称中文: "教授",
-    info-keys.作者学院: "学院名称",
-    ```
-  ]
-]
-
-=== 中文扉页信息
-
-中文扉页包含分类号、密级、答辩信息等详细内容：
-
-#block(width: 100%)[
-  #set align(center)
-  #block(breakable: false)[
-    #set align(left)
-    ```typ
-    info-keys.分类号: "TP309.2",
-    info-keys.密级: "公开",
-    info-keys.UDC: "004.78",
-    info-keys.指导老师单位: "电子科技大学 成都",
-    info-keys.合作导师中文名: "合作导师姓名",
-    info-keys.合作导师职称中文: "教授",
-    info-keys.合作导师单位: "合作导师单位",
-    info-keys.专业学位领域: "领域名称", // 专业型填写，学术型忽略
-    info-keys.提交日期: "2025年3月17日",
-    info-keys.答辩日期: "2025年4月15日",
-    info-keys.学位授予单位: "电子科技大学",
-    info-keys.学位授予日期: "2025年6月1日",
-    info-keys.答辩委员会主席: "主席名称",
-    info-keys.答辩委员会主席职称: "主席职称",
-    // 以下两个参数为元组类型
-    info-keys.评阅人: ("成员1", "成员2"),
-    ```
-  ]
-]
-
-=== 英文扉页信息
-
-英文扉页对应中文扉页的英文版本：
-
-#block(width: 100%)[
-  #set align(center)
-  #block(breakable: false)[
-    #set align(left)
-    ```typ
-    info-keys.论文英文标题: "English Thesis Title",
-    info-keys.作者学科专业英文: "Discipline",      // 学术型填写
-    // info-keys.作者专业学位类别英文: "Category",  // 专业型填写
-    info-keys.作者英文名: "Author Name",
-    info-keys.指导老师英文名: "Advisor Name",
-    info-keys.指导老师职称英文: "Professor",
-    info-keys.作者学院英文: "School Name",
-    ```
-  ]
-]
-
-=== 论文内容信息
-
-以下参数配置论文正文内容，包括摘要、附录、参考文献等：
-
-#block(width: 100%)[
-  #set align(center)
-  #block(breakable: false)[
-    #set align(left)
-    ```typ
-    // 使用 include 引入内容的参数
-    info-keys.中文摘要: include "src/摘要-中文.typ",
-    info-keys.英文摘要: include "src/摘要-英语.typ",
-    info-keys.致谢: include "src/致谢.typ",
-    // 附录为元组（可包含多个 include）
-    info-keys.附录: (include "src/附录-1.typ", include "src/附录-2.typ"),
-
-    // 使用字符串路径的参数
-    info-keys.参考文献: "src/bib/参考文献.bib",
-
-    // 关键字为元组
-    info-keys.中文摘要关键字: ("关键字1", "关键字2"),
-    info-keys.英文摘要关键字: ("Keyword1", "Keyword2"),
-
-    // 成果列表（字典格式）和攻读学位期间取得成果
-    // 详见"攻读学位期间取得成果"章节
-    info-keys.成果列表: (...),
-    info-keys.攻读学位期间取得成果: true,
-
-    // 浮动表图：当页面包含一级标题时，浮动图表放在页面底部
-    info-keys.浮动表图标题页置底: true,
     ```
   ]
 ]
