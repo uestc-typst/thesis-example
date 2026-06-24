@@ -1,10 +1,10 @@
 [package]
 name = "electronic-uestc-thesis"
-version = "0.1.0"
+version = "2.0.0"
 entrypoint = "uestc-thesis-template/lib.typ"
 authors = ["UESTC Typst Community"]
 license = "Apache-2.0"
-description = "电子科技大学本科/硕士/博士学位论文 Typst 模板。"
+description = "电子科技大学本科/硕士/博士学位论文 Typst 模板，博士模板已经过学校验证。"
 repository = "https://github.com/uestc-typst/thesis-template"
 keywords = ["UESTC", "thesis", "degree", "template", "Typst", "电子科技大学"]
 categories = ["thesis"]
