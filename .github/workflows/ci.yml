@@ -22,6 +22,7 @@ jobs:
       - name: build
         run: |
           git submodule update --init --recursive
+          cd example
           make build
 
       - name: Checkout output branch
@@ -30,7 +31,7 @@ jobs:
           git config user.email "<>"
           git checkout --orphan output
           git rm -r --cached .
-          git add -f *.pdf
+          git add -f example/*.pdf
           git commit -m "Update output files"
 
       - name: Push changes
