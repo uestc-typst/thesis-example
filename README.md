@@ -67,7 +67,7 @@ make watch
 
 ## 🪶 使用 VS Code（推荐）
 
-本仓库已预配置 Tinymist Typst 扩展，**直接用 VS Code 打开仓库根目录**即可获得实时预览和 PDF 导出，无需手动配置。
+本仓库已预配置 Tinymist Typst 扩展，**直接用 VS Code 打开仓库根目录或者 `example/` 子目录**即可获得实时预览和 PDF 导出，无需手动配置。
 
 1. **安装扩展**：在 VS Code 扩展市场搜索并安装Tinymist Typst
 
