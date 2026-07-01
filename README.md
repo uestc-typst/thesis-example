@@ -1,3 +1,15 @@
+> [!WARNING]
+> ## ⚠️ 本仓库已废弃（Deprecated）
+> 本仓库已与 [`uestc-typst/thesis-template`](https://github.com/uestc-typst/thesis-template) 合并，**不再单独维护**。
+>
+> 请前往新仓库获取最新模板与示例：**👉 https://github.com/uestc-typst/thesis-template**
+>
+> - ✅ 新仓库已包含模板与写作示例
+> - ✅ 后续所有更新、Bug 修复、Issue 处理都在新仓库进行
+> - ❌ 本仓库不再接受 Issue / Pull Request（已归档为只读）
+>
+> 本仓库内容将保持现状作为历史参考，但建议所有新项目直接使用新仓库。
+
 <div align="center">
 <strong>
 <samp>
@@ -101,3 +113,4 @@ git restore --source=origin/output --worktree "学位论文写作指南及例子
 可以在 `.github/workflows/ci.yml` 文件中修改流水线构建的配置. 比如流水线的名称, 触发条件, 构建命令等
 
 **默认操作是：向任意分支push代码后, 会将所有pdf文件强制推送到output分支(之前生成的文件会被覆盖)**
+```
